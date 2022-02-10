@@ -131,6 +131,16 @@ $selected_Partner = $Partner_array[$id];
                 </div>
                 <!-- End Form Group -->
 
+                    <div class="row form-group">
+						<label for="user_type" class="col-sm-3 col-form-label input-label">User Type</label>
+						<select class="form-control col-sm-9" name="user_type" id="user_type" >
+						  <option value="1">Admin</option>
+						  <option value="2">Warehouse</option>
+						  <option value="3">Customer</option>
+						  <option value="4">Sales</option>
+						</select>
+                    </div>
+
                 <!-- Add Phone Input Field -->
                 <div id="addPhoneFieldTemplate" style="display: none;">
                   <div class="input-group input-group-add-field">
@@ -276,6 +286,15 @@ $selected_Partner = $Partner_array[$id];
     <script src="./assets/js/dashkit.min.js"></script>
 <script>
 
+$(document).ready(function() {
+var id='<?php echo $id;?>';
+if(id == '0'){
+	var user_type='1';
+}else{
+	var user_type='3'
+}
+$("#user_type").val(user_type).change();
+});
 
 $("#tracking_id, #courier_partner").change(function () {
     var id =  $('#courier_partner').val();

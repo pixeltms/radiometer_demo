@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Radiometere - Delivery Challan" />
+    <meta name="description" content="Radiometere - Invoice" />
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./assets/css/theme.min.css">
       
     <!-- Title -->
-    <title>Delivery Challan - DC-<?php echo $_GET['id'];?></title>
+    <title>Invoice - DC-<?php echo $_GET['id'];?></title>
 
   </head>
   <body>    
@@ -42,17 +42,12 @@
                 <div class="row align-items-center">
                   <div class="col">
 
-                    <!-- Pretitle -->
-                    <h6 class="header-pretitle">
-                      Overview
-                    </h6>
-
                     <!-- Title -->
                     <h1 class="header-title">
-                      Delivery Challan
+                      Invoice
                     </h1>
 					 <p class="text-muted mb-1">
-						Delivery Challan #DC-<?php echo $_GET['id'];?>
+						Invoice #IN-<?php echo $_GET['id'];?>
 					  </p>
                   </div>
 
@@ -92,49 +87,12 @@
 
                   <!-- Heading -->
                   <div class="text-muted">
-                    <div class="row">
-						<div class="col-6 text-md-right">Challan Number:</div> 
-						<div class="col-6 text-md-left">DC-<?php echo $_GET['id'];?></div>
-					</div>
-                  </div>
-                  <div class="text-muted">
 					<div class="row">
-						<div class="col-6 text-md-right">Challan Date:</div>  
+						<div class="col-6 text-md-right">Invoice Date:</div>  
 						<div class="col-6 text-md-left">09/12/2021</div>
 					</div>
                   </div>
-                  <!-- Text -->
-                  <div class="text-muted">
-					<div class="row">
-						<div class="col-6 text-md-right">Place Of supply:</div>  
-						<div class="col-6 text-md-left">Delhi</div>
-					</div>
-                  </div>
-                  <div class="text-muted">
-					<div class="row">
-						<div class="col-6 text-md-right">E-Way Number:</div>  
-						<div class="col-6 text-md-left">DFJFDH394823</div>
-					</div>
-                  </div>
-                  <div class="text-muted">
-					<div class="row">
-						<div class="col-6 text-md-right">Transport:</div>  
-						<div class="col-6 text-md-left">TEST TRANSPORT</div>
-					</div>
-                  </div>		
-                  <div class="text-muted">
-					<div class="row">
-						<div class="col-6 text-md-right">Transport ID:</div>  
-						<div class="col-6 text-md-left">38374848</div>
-					</div>
-                  </div>	
-                  <div class="text-muted">
-					<div class="row">
-						<div class="col-6 text-md-right">Vehicle Number:</div>  
-						<div class="col-6 text-md-left">MH-02-DC-8383</div>
-					</div>
-                  </div>				  
-                </div>
+				  </div>
               </div> <!-- / .row -->
               <div class="row">
                 <div class="col-12">
@@ -196,7 +154,13 @@
                               INR 4748.3
                             </span>
                           </td>
+						 
                         </tr>
+						<tr>
+							<td colspan=4>
+							In Words: Rs. Four Thousand Seven Hundred Forty-Eight and Thirty Paise
+							</td>
+						</tr>
                       </tbody>
                     </table>
                   </div>
@@ -210,7 +174,7 @@
 
                   <!-- Text -->
                   <p class="text-muted mb-0">
-                    Special Instructions for the DC
+                    Please clear dues within 15 days of invoice date
                   </p>
 
                 </div>

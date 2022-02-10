@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+if(!empty($_SESSION['customer_id'])){
+	header("Location: purchase_order.php");
+}else{
+	header("Location: login.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1,3 +1,33 @@
+<?php 
+session_start();
+
+
+if(!empty($_SESSION['customer_id'])){
+$customer_id = $_SESSION['customer_id'];
+}else{
+	$customer_id = '101';
+}
+echo $customer_id;
+$cust_1= '';
+$cust_2='';
+$show_all ='';
+
+if($customer_id == '101'){
+	$cust_1 = '';
+	$cust_2 ='';
+}
+
+if($customer_id == '1'){
+	$cust_1 ='';
+	$cust_2 ='d-none';
+}
+
+if($customer_id == '2'){
+	$cust_2 ='';
+	$cust_1 ='d-none';
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -106,11 +136,15 @@
                           Status
                         </a>
                       </th>
-
+                      <th>
+                        
+                         Actions
+                        
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="list">
-                    <tr>
+                    <tr class="<?php echo  $cust_1;?> ">
 
                       <td class="orders-order">
                         <a href="/po_detail.php?id=6520">PO-72</a>
@@ -136,7 +170,7 @@
 
                       </td>
 
-                      <td class="text-right">
+                      <td>
 
                         <!-- Dropdown -->
                         <div class="dropdown">
@@ -145,20 +179,17 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Action
+                              Download PO
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
+                              Send PO PDF to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $cust_1;?> ">
 
                       <td class="orders-order">
                         <a href="/po_detail.php?id=6521">PO-73</a>
@@ -184,7 +215,7 @@
 
                       </td>
 
-                      <td class="text-right">
+                      <td>
 
                         <!-- Dropdown -->
                         <div class="dropdown">
@@ -193,20 +224,17 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Action
+                              Download PO
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
+                              Send PO PDF to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/po_detail.php?id=6522">PO-74</a>
@@ -232,7 +260,7 @@
 
                       </td>
 
-                      <td class="text-right">
+                      <td>
 
                         <!-- Dropdown -->
                         <div class="dropdown">
@@ -241,26 +269,23 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Action
+                              Download PO
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
+                              Send PO PDF to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/po_detail.php?id=6523">PO-75</a>
                       </td>
                       <td class="orders-customer">
-                        Customer 3
+                        Customer 2
                       </td>
                       <td class="orders-date">
 
@@ -280,7 +305,7 @@
 
                       </td>
 
-                      <td class="text-right">
+                      <td>
 
                         <!-- Dropdown -->
                         <div class="dropdown">
@@ -289,20 +314,17 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Action
+                              Download PO
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
+                              Send PO PDF to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/po_detail.php?id=6524">PO-76</a>
@@ -328,7 +350,7 @@
 
                       </td>
 
-                      <td class="text-right">
+                      <td>
 
                         <!-- Dropdown -->
                         <div class="dropdown">
@@ -337,13 +359,10 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Action
+                              Download PO
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
+                              Send PO PDF to Customer
                             </a>
                           </div>
                         </div>

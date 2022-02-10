@@ -27,13 +27,12 @@ if($customer_id == '2'){
 	$cust_1 ='d-none';
 }
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Radiometere - Sales Order" />
+    <meta name="description" content="Radiometere - Invoice" />
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
@@ -49,7 +48,7 @@ if($customer_id == '2'){
     <link rel="stylesheet" href="./assets/css/theme.min.css">
       
     <!-- Title -->
-    <title>Sales Orders</title>
+    <title>Invoices</title>
 
   </head>
   <body>    
@@ -79,7 +78,7 @@ if($customer_id == '2'){
 
                     <!-- Title -->
                     <h1 class="header-title">
-                      Sales Orders
+                      Invoices
                     </h1>
 
                   </div>
@@ -109,11 +108,11 @@ if($customer_id == '2'){
               <div class="table-responsive">
                 <table class="table table-sm table-nowrap card-table">
                   <thead>
-                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
+                    <tr>
 
                       <th>
                         <a href="#" class="text-muted list-sort" data-sort="orders-order">
-                          Order Number
+                          Invoice Number
                         </a>
                       </th>
                       <th>
@@ -123,34 +122,24 @@ if($customer_id == '2'){
                       </th>
                       <th>
                         <a href="#" class="text-muted list-sort" data-sort="orders-date">
-                          Order Date
+                          Invoice Date
                         </a>
                       </th>
+
                       <th>
-                        <a href="#" class="text-muted list-sort" data-sort="orders-total">
-                          Order Total (INR)
-                        </a>
+							Actions
                       </th>
-                      <th>
-                        <a href="#" class="text-muted list-sort" data-sort="orders-status">
-                          Status
-                        </a>
-                      </th>
-                      <th>
-                        
-                        Actions
-                        
-                      </th>
+
                     </tr>
                   </thead>
                   <tbody class="list">
-                    <tr class="<?php echo $cust_1;?> ">
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6520">SO-6520</a>
+                        <a href="/invoice_detail.php?id=6520">IN-6520</a>
                       </td>
                       <td class="orders-customer">
-                        Customer 1
+                        Customer 5
                       </td>
                       <td class="orders-date">
 
@@ -158,17 +147,7 @@ if($customer_id == '2'){
                         <time datetime="2021-09-12">09/12/2021</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs. 4748.3
-                      </td>
-                      <td class="orders-status">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-success">
-                          Delivered
-                        </div>
-
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -178,21 +157,22 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
 
+
                     </tr>
-                    <tr class="<?php echo $cust_1;?> ">
+                    <tr class="<?php echo $cust_1?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6521">SO-6521</a>
+                        <a href="/invoice_detail.php?id=6521">IN-6521</a>
                       </td>
                       <td class="orders-customer">
                        Customer 1
@@ -203,17 +183,7 @@ if($customer_id == '2'){
                         <time datetime="2021-12-09">09/12/2021</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs. 37281.23
-                      </td>
-                      <td class="orders-status">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-success">
-                          Delivered
-                        </div>
-
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -223,24 +193,25 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
 
+
                     </tr>
-                    <tr class="<?php echo $cust_1.$cust_2;?> ">
+                    <tr class="<?php echo $cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6522">SO-6522</a>
+                        <a href="/invoice_detail.php?id=6522">IN-6522</a>
                       </td>
                       <td class="orders-customer">
-                        Customer 6
+                        Customer 2
                       </td>
                       <td class="orders-date">
 
@@ -248,17 +219,7 @@ if($customer_id == '2'){
                         <time datetime="2021-12-31">31/12/2021</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs 3225.50
-                      </td>
-                      <td class="orders-sratus">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-warning">
-                          Processing
-                        </div>
-
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -268,21 +229,22 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
 
+
                     </tr>
-                    <tr class="<?php echo $cust_1.$cust_2;?> ">
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6523">SO-6523</a>
+                        <a href="/invoice_detail.php?id=6523">IN-6523</a>
                       </td>
                       <td class="orders-customer">
                         Customer 3
@@ -293,17 +255,7 @@ if($customer_id == '2'){
                         <time datetime="2022-01-02">02/01/2022</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs. 28281.99
-                      </td>
-                      <td class="orders-status">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-danger">
-                          Cancelled
-                        </div>
-
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -313,21 +265,22 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
 
+
                     </tr>
-                    <tr class="<?php echo $cust_1.$cust_2;?> ">
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6524">SO-6524</a>
+                        <a href="/invoice_detail.php?id=6524">IN-6524</a>
                       </td>
                       <td class="orders-customer">
                         Customer 5
@@ -338,17 +291,7 @@ if($customer_id == '2'){
                         <time datetime="2022-01-13">13/01/2022</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs 43431.99
-                      </td>
-                      <td class="orders-status">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-secondary">
-                          Shipped
-                        </div>
-						<a href="https://trackingcompany.com/8434394890">Track</a>						
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -358,20 +301,20 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
                     </tr>
-                    <tr class="<?php echo $cust_1.$cust_2;?> ">
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6525">SO-6525</a>
+                        <a href="/invoice_detail.php?id=6525">IN-6525</a>
                       </td>
                       <td class="orders-customer">
                         Customer 3
@@ -382,17 +325,6 @@ if($customer_id == '2'){
                         <time datetime="2022-01-19">19/01/2022</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs 23899.99
-                      </td>
-                      <td class="orders-status">
-
-                        <!-- Badge -->
-                        <div class="badge badge-soft-secondary">
-                          Shipped
-                        </div>
-						<a href="https://trackingcompany.com/8434394890">Track</a>		
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -402,21 +334,22 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
 
+
                     </tr>
-                   <tr class="<?php echo $cust_1.$cust_2;?> ">
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6526">SO-6526</a>
+                        <a href="/invoice_detail.php?id=6526">IN-6526</a>
                       </td>
                       <td class="orders-customer">
                         Customer 4
@@ -427,17 +360,7 @@ if($customer_id == '2'){
                         <time datetime="2022-01-23">23/01/2022</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs. 384919.99
-                      </td>
-                      <td class="orders-status">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-warning">
-                          Processing
-                        </div>
-
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -447,21 +370,22 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
 
+
                     </tr>
-                   <tr class="<?php echo $cust_2;?> ">
+                    <tr class="<?php echo $cust_2;?> ">
 
                       <td class="orders-order">
-                        <a href="/so_detail.php?id=6527">SO-6527</a>
+                        <a href="/invoice_detail.php?id=6527">IN-6527</a>
                       </td>
                       <td class="orders-customer">
                         Customer 2
@@ -472,17 +396,7 @@ if($customer_id == '2'){
                         <time datetime="2022-02-05">05/02/2022</time>
 
                       </td>
-                      <td class="orders-total">
-                        Rs. 8989.99
-                      </td>
-                      <td class="orders-sratus">
 
-                        <!-- Badge -->
-                        <div class="badge badge-soft-secondary">
-                          Shipped
-                        </div>
-						<a href="https://trackingcompany.com/8434394890">Track</a>		
-                      </td>
                       <td>
 
                         <!-- Dropdown -->
@@ -492,15 +406,16 @@ if($customer_id == '2'){
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
-                              Download SO
+                              Download Invoice
                             </a>
                             <a href="#!" class="dropdown-item">
-                              Send SO to Customer
+                              Send Invoice to Customer
                             </a>
                           </div>
                         </div>
 
                       </td>
+
 
                     </tr>
                   </tbody>

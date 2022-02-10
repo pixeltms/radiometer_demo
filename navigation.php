@@ -1,14 +1,32 @@
-<?php      
-/*
-session_start();     
-if($_SESSION['logged_in']==1) {         
-	//session is set         
-	header('Location: index.php');     
-} else{         //session is not set         
-header("Location: login.php");     
-}  
-*/
- ?>
+<?php 
+session_start();
+
+
+if(!empty($_SESSION['customer_id'])){
+$customer_id = $_SESSION['customer_id'];
+}else{
+	$customer_id = '101';
+}
+echo $customer_id;
+$cust_1= '';
+$cust_2='';
+$show_all ='';
+
+if($customer_id == '101'){
+	$cust_1 = '';
+	$cust_2 ='';
+}
+
+if($customer_id == '1'){
+	$cust_1 ='';
+	$cust_2 ='d-none';
+}
+
+if($customer_id == '2'){
+	$cust_2 ='';
+	$cust_1 ='d-none';
+}
+?>
     <!-- NAVIGATION
     ================================================== -->
     
@@ -96,19 +114,20 @@ header("Location: login.php");
                       Invoices
                     </a>
                   </li>
-				  
+				  <?php if($customer_id =='101'){?>
                   <li class="nav-item">
                     <a href="./dispatch_main.php" class="nav-link ">
                       Dispatches
                     </a>
-                  </li>				  
+                  </li>
+				  <?php }?>				  
                 </ul>
               </div>
             </li>
 
 
           </ul>
-
+		<?php if($customer_id =='101'){?>
           <!-- Divider -->
           <hr class="navbar-divider my-3">
 
@@ -141,7 +160,7 @@ header("Location: login.php");
 			  </li>
 
           </ul>
-
+		<?php }?>
           <!-- Push content down -->
           <div class="mt-auto"></div>
 
@@ -151,12 +170,6 @@ header("Location: login.php");
           <!-- User (md) -->
           <div class="navbar-user d-none d-md-flex" id="sidebarUser">
 
-            <!-- Icon -->
-            <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
-              <span class="icon">
-                <i class="fe fe-bell"></i>
-              </span>
-            </a>
 
             <!-- Dropup -->
             <div class="dropup">
@@ -164,24 +177,19 @@ header("Location: login.php");
               <!-- Toggle -->
               <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="avatar avatar-sm avatar-online">
-                  <img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                  <img src="./assets/img/avatars/profiles/avatar_logo.jpg" class="avatar-img rounded-circle" alt="...">
                 </div>
+				
               </a>
-
+				<?php if(!empty($_SESSION['customer_name'])){echo $_SESSION['customer_name'];}?>
               <!-- Menu -->
               <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
-                <a href="./profile.php" class="dropdown-item">Profile</a>
-                <a href="./logout.php" class="dropdown-item">Logout</a>
+                <a href="/user_detail.php?id=<?php echo $_SESSION['customer_id'];?>" class="dropdown-item">Profile</a>
+                <a href="/logout.php" class="dropdown-item">Logout</a>
               </div>
 
             </div>
 
-            <!-- Icon -->
-            <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
-              <span class="icon">
-                <i class="fe fe-search"></i>
-              </span>
-            </a>
 
           </div>
           

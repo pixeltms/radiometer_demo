@@ -1,27 +1,37 @@
-<!doctype html>
 <?php
-    session_start();
-    $message="";
-    if(count($_POST)>0) {
-		echo "here";
-		exit;
-        if(is_array($row)) {
-        $_SESSION["id"] = $row['id'];
-        $_SESSION["name"] = $row['name'];
-        } else {
-         $message = "Invalid Username or Password!";
-        }
-    }
-    if(isset($_SESSION["id"])) {
-    header("Location:index.php");
-    }
+session_start();
+
+//var_dump($_POST);exit;
+
+if(!empty($_POST['email'])){
+	if(strpos($_POST['email'],'radiometer') !== false){
+		$_SESSION['is_radiometer_user'] = true;
+		$_SESSION['customer_id'] = '101';
+		$_SESSION['customer_name'] = 'admin';
+	}else{
+		$_SESSION['is_radiometer_user'] = false;
+		
+		if(strpos($_POST['email'],'cust1') !== false){
+			$_SESSION['customer_id'] = '1';
+			$_SESSION['customer_name'] = 'Cust 1';			
+		}else{
+			$_SESSION['customer_id'] = '2';
+			$_SESSION['customer_name'] = 'Cust 2';
+		}
+	}
+	
+	header("Location: purchase_orders.php");
+}
 ?>
+
+<!doctype html>
+
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+    <meta name="description" content="Radiometer - Login" />
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
@@ -37,7 +47,7 @@
     <link rel="stylesheet" href="./assets/css/theme.min.css">
       
     <!-- Title -->
-    <title>Dashkit</title>
+    <title>Radiometer - Login</title>
 
   </head>
   <body class="d-flex align-items-center bg-auth border-top border-top-2 border-primary">
@@ -67,7 +77,7 @@
           </p>
           
           <!-- Form -->
-          <form method="post">
+          <form method="post" action="login.php" >
 
             <!-- Email address -->
             <div class="form-group">
@@ -76,7 +86,7 @@
               <label>Email Address</label>
 
               <!-- Input -->
-              <input type="email" class="form-control" placeholder="name@address.com">
+              <input type="text" name="email" class="form-control" id="email" placeholder="name@address.com">
 
             </div>
 
@@ -104,7 +114,7 @@
               <div class="input-group input-group-merge">
 
                 <!-- Input -->
-                <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
+                <input type="password" name="password" id="password" class="form-control form-control-appended" placeholder="Enter your password">
 
                 <!-- Icon -->
                 <div class="input-group-append">
@@ -117,7 +127,7 @@
             </div>
 
             <!-- Submit -->
-            <button class="btn btn-lg btn-block btn-primary mb-3">
+            <button type="submit" class="btn btn-lg btn-block btn-primary mb-3">
               Sign in
             </button>
 

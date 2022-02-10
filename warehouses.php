@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Radiometere - Delivery Challan" />
+    <meta name="description" content="Radiometere - Sales Order" />
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./assets/css/theme.min.css">
       
     <!-- Title -->
-    <title>Dispatches</title>
+    <title>Warehouses</title>
 
   </head>
   <body>    
@@ -49,7 +49,7 @@
 
                     <!-- Title -->
                     <h1 class="header-title">
-                      Dispatches
+                      Warehouses
                     </h1>
 
                   </div>
@@ -83,22 +83,17 @@
 
                       <th>
                         <a href="#" class="text-muted list-sort" data-sort="orders-order">
-                          Dispatch Number
+                          Warehouse ID
                         </a>
                       </th>
-                      <th>
-                        <a href="#" class="text-muted list-sort" data-sort="orders-order">
-                          Customer
-                        </a>
-                      </th>					  
                       <th>
                         <a href="#" class="text-muted list-sort" data-sort="orders-customer">
-                          Dispatch Date
+                          Location
                         </a>
                       </th>
                       <th>
-                        <a href="#" class="text-muted list-sort" data-sort="orders-status">
-                          Status
+                        <a href="#" class="text-muted list-sort" data-sort="orders-date">
+                          Warehouse Name
                         </a>
                       </th>
 
@@ -106,136 +101,48 @@
                   </thead>
                   <tbody class="list">
                     <tr>
+
                       <td class="orders-order">
-                        <a href="/dispatch_detail.php?id=1">1</a>
+                        <a href="/warehouse_detail.php?id=1">1</a>
                       </td>
                       <td class="orders-customer">
-                        Customer 1
-                      </td>
-                      <td class="orders-date">
-
-                        <!-- Time -->
-                        <time datetime="2021-09-12">09/12/2021</time>
-
+                        Mumbai
                       </td>
 
-                      <td class="orders-status">
-
-                        <!-- Badge -->
-                        <div class="badge badge-soft-success">
-                          Delivered
-                        </div>
-
-                      </td>
-
-
-                    </tr>
-                    <tr>
-                      <td class="orders-order">
-                        <a href="/dispatch_detail.php?id=2">2</a>
-                      </td>
-
-                      <td class="orders-customer">
-                       Customer 1
-                      </td>
-                      <td class="orders-date">
-
-                        <!-- Time -->
-                        <time datetime="2021-12-09">09/12/2021</time>
-
-                      </td>
-
-                      <td class="orders-status">
-
-                        <!-- Badge -->
-                        <div class="badge badge-soft-success">
-                          Delivered
-                        </div>
-
-                      </td>
-
-
-                    </tr>
-
-
-                    <tr>
-                      <td class="orders-order">
-                        <a href="/dispatch_detail.php?id=5">5</a>
-                      </td>
-
-                      <td class="orders-customer">
-                        Customer 5
-                      </td>
-                      <td class="orders-date">
-
-                        <!-- Time -->
-                        <time datetime="2022-01-13">13/01/2022</time>
-
-                      </td>
-
-                      <td class="orders-status">
-
-                        <!-- Badge -->
-                        <div class="badge badge-soft-secondary">
-                          Shipped
-                        </div>
-						<a href="https://trackingcompany.com/8434394890">Track</a>						
+                      <td class="orders-total">
+                        Mumbai Warehouse
                       </td>
 
                     </tr>
                     <tr>
+
                       <td class="orders-order">
-                        <a href="/dispatch_detail.php?id=6">6</a>
+                        <a href="/warehouse_detail.php?id=2">2</a>
                       </td>
-
                       <td class="orders-customer">
-                        Customer 3
-                      </td>
-                      <td class="orders-date">
-
-                        <!-- Time -->
-                        <time datetime="2022-01-19">19/01/2022</time>
-
+                        Panvel
                       </td>
 
-                      <td class="orders-status">
-
-                        <!-- Badge -->
-                        <div class="badge badge-soft-secondary">
-                          Shipped
-                        </div>
-						<a href="https://trackingcompany.com/8434394890">Track</a>		
+                      <td class="orders-total">
+                        Panvel - Warehouse 1
                       </td>
-
 
                     </tr>
-
                     <tr>
+
                       <td class="orders-order">
-                        <a href="/dispatch_detail.php?id=8">8</a>
+                        <a href="/warehouse_detail.php?id=3">3</a>
                       </td>
-
                       <td class="orders-customer">
-                        Customer 2
-                      </td>
-                      <td class="orders-date">
-
-                        <!-- Time -->
-                        <time datetime="2022-02-05">05/02/2022</time>
-
+                        Panvel
                       </td>
 
-                      <td class="orders-sratus">
-
-                        <!-- Badge -->
-                        <div class="badge badge-soft-secondary">
-                          Shipped
-                        </div>
-						<a href="https://trackingcompany.com/8434394890">Track</a>		
+                      <td class="orders-total">
+                        Panvel - Warehouse 2
                       </td>
-
 
                     </tr>
+					
                   </tbody>
                 </table>
               </div>

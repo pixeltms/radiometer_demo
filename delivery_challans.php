@@ -1,3 +1,32 @@
+<?php 
+session_start();
+
+
+if(!empty($_SESSION['customer_id'])){
+$customer_id = $_SESSION['customer_id'];
+}else{
+	$customer_id = '101';
+}
+echo $customer_id;
+$cust_1= '';
+$cust_2='';
+$show_all ='';
+
+if($customer_id == '101'){
+	$cust_1 = '';
+	$cust_2 ='';
+}
+
+if($customer_id == '1'){
+	$cust_1 ='';
+	$cust_2 ='d-none';
+}
+
+if($customer_id == '2'){
+	$cust_2 ='';
+	$cust_1 ='d-none';
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -102,11 +131,15 @@
                           Status
                         </a>
                       </th>
-
+                      <th>
+                        
+                         Actions
+                        
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="list">
-                    <tr>
+                    <tr class="<?php echo $cust_1;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6520">DC-6520</a>
@@ -129,10 +162,30 @@
                         </div>
 
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="./DC-6520.pdf" target="_blank" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $cust_1?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6521">DC-6521</a>
@@ -155,10 +208,30 @@
                         </div>
 
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6522">DC-6522</a>
@@ -181,10 +254,30 @@
                         </div>
 
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6523">DC-6523</a>
@@ -207,10 +300,30 @@
                         </div>
 
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6524">DC-6524</a>
@@ -233,9 +346,29 @@
                         </div>
 						<a href="https://trackingcompany.com/8434394890">Track</a>						
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6525">DC-6525</a>
@@ -258,10 +391,30 @@
                         </div>
 						<a href="https://trackingcompany.com/8434394890">Track</a>		
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $show_all . $cust_1.$cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6526">DC-6526</a>
@@ -284,10 +437,30 @@
                         </div>
 
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
-                    <tr>
+                    <tr class="<?php echo $cust_2;?> ">
 
                       <td class="orders-order">
                         <a href="/dc_detail.php?id=6527">DC-6527</a>
@@ -310,7 +483,27 @@
                         </div>
 						<a href="https://trackingcompany.com/8434394890">Track</a>		
                       </td>
+                      <td>
 
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Download DC
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Customer (Email)
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Send DC to Warehouse (Email)
+                            </a>							
+                          </div>
+                        </div>
+
+                      </td>
 
                     </tr>
                   </tbody>

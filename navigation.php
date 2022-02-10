@@ -7,7 +7,7 @@ $customer_id = $_SESSION['customer_id'];
 }else{
 	$customer_id = '101';
 }
-echo $customer_id;
+
 $cust_1= '';
 $cust_2='';
 $show_all ='';
@@ -54,16 +54,14 @@ if($customer_id == '2'){
             <!-- Toggle -->
             <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="avatar avatar-sm avatar-online">
-                <img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                <img src="./assets/img/avatars/profiles/avatar_logo.jpg" class="avatar-img rounded-circle" alt="...">
               </div>
             </a>
 
             <!-- Menu -->
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
-              <a href="./profile-posts.html" class="dropdown-item">Profile</a>
-              <a href="./account-general.html" class="dropdown-item">Settings</a>
-              <hr class="dropdown-divider">
-              <a href="./sign-in.html" class="dropdown-item">Logout</a>
+              <a href="/user_detail.php?id=<?php echo $_SESSION['customer_id'];?>" class="dropdown-item">Profile</a>
+              <a href="/logout.php" class="dropdown-item">Logout</a>
             </div>
 
           </div>

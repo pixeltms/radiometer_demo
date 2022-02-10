@@ -7,7 +7,7 @@ $customer_id = $_SESSION['customer_id'];
 }else{
 	$customer_id = '101';
 }
-echo $customer_id;
+//echo $customer_id;
 $cust_1= '';
 $cust_2='';
 $show_all ='';

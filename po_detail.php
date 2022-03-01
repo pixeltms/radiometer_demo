@@ -110,62 +110,170 @@
 
                   <!-- Table -->
                   <div class="table-responsive">
-                    <table class="table my-4">
+                    <table class="table my-4 ">
                       <thead>
                         <tr>
-                          <th class="px-0 bg-transparent border-top-0">
-                            <span class="h6">Item Name</span>
+                          <th class="px-0 bg-transparent border-top-0 col-1">
+                            <span class="h6">Sr. No.</span>
+                          </th>		
+                          <th class="px-0 bg-transparent border-top-0 col-1">
+                            <span class="h6">Part Number</span>
+                          </th>						  
+                          <th class="px-0 bg-transparent border-top-0 col-3">
+                            <span class="h6">Item Description</span>
                           </th>
-                          <th class="px-0 bg-transparent border-top-0 ">
+                          <th class="px-0 bg-transparent border-top-0 col-1">
+                            <span class="h6">UOM</span>
+                          </th>						  
+                          <th class="px-0 bg-transparent border-top-0 col-1">
                             <span class="h6">Qty</span>
                           </th>
-                          <th class="px-0 bg-transparent border-top-0">
-                            <span class="h6">price</span>
+                          <th class="px-0 bg-transparent border-top-0 col-1">
+                            <span class="h6">Rate</span>
                           </th>						  
-                          <th class="px-0 bg-transparent border-top-0 text-right">
-                            <span class="h6">Cost</span>
+                          <th class="px-0 bg-transparent border-top-0 text-right col-1">
+                            <span class="h6">Amount INR</span>
                           </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td class="px-0">
-                            Item - 3
+                            1
+                          </td>						
+                          <td class="px-0">
+                            944-506
                           </td>
+                          <td class="px-0">
+                            SBP SOLUTION PACK
+                          </td>
+                          <td class="px-0">
+                          </td>						  
                           <td class="px-0">
                             1
                           </td>
-                          <td class="px-0">
-                            125.45
-                          </td>						  
-                          <td class="px-0 text-right">
-                            125.45
+                          <td class="px-0 ">
+                            ₹ 3,468.00
                           </td>
+                          <td class="px-0 text-right">
+                            ₹ 3468.00
+                          </td>						  
                         </tr>
                         <tr>
                           <td class="px-0">
-                           Item - 2
+                            2
+                          </td>						
+                          <td class="px-0">
+                            945-858
                           </td>
                           <td class="px-0">
-                            15
+                            SCg 100/60 2 - BGE
                           </td>
                           <td class="px-0">
-                            308.19
                           </td>						  
-                          <td class="px-0 text-right">
-                            4622.85
+                          <td class="px-0">
+                            1
                           </td>
+                          <td class="px-0 ">
+                            ₹ 18360.00
+                          </td>
+                          <td class="px-0 text-right">
+                            ₹ 18,360.00
+                          </td>						  
                         </tr>
+						
                         <tr>
-                          <td class="px-0 border-top border-top-2">
-                            <strong>Total amount </strong>
+                          <td class="px-0">
+                            3
+                          </td>						
+                          <td class="px-0">
+                            945-851
+                          </td>
+                          <td class="px-0">
+                            Sensor cassette for ABL9 - SC9
+100/30 2-BGEL
+                          </td>
+                          <td class="px-0">
+                             
+                          </td>						  
+                          <td class="px-0 ">
+                            1
+                          </td>
+                          <td class="px-0 ">
+                            ₹ 15,810.00
+                          </td>
+                          <td class="px-0 text-right">
+                            ₹ 15,810.00
+                          </td>						  
+                        </tr>						
+                        <tr>
+                          <td class="px-0">
+                            4
+                          </td>						
+                          <td class="px-0">
+                            945-850
+                          </td>
+                          <td class="px-0">
+                            Sensor cassette for ABL9 - SC9
+50/30 2-BGEL
+                          </td>
+                          <td class="px-0">
+                             
+                          </td>						  
+                          <td class="px-0 ">
+                            1
+                          </td>
+                          <td class="px-0 ">
+                            ₹ 11220.00
+                          </td>
+                          <td class="px-0 text-right">
+                            ₹ 11,220.00
+                          </td>						  
+                        </tr>						
+                        <tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+                          <td colspan=2 class="px-0 border-top border-top-2 text-right">
+                            <strong>Sub Total</strong>
                           </td>
                           <td colspan="3" class="px-0 text-right border-top border-top-2">
                             <span class="h3">
-                              INR 4748.3
+                              ₹ 48,858.00
                             </span>
                           </td>
                         </tr>
+                        <tr>
+						<td></td>
+						<td></td>
+						
+						<td></td>
+						<td></td>
+                          <td colspan=2 class="px-0 border-top border-top-2 text-right">
+                            <strong>GST AS applicable </strong>
+                          </td>
+                          <td colspan="3" class="px-0 text-right border-top border-top-2">
+                            <span class="h3">
+                              ₹ 5,862.96
+                            </span>
+                          </td>
+                        </tr>						
+                        <tr>
+						<td></td>
+						
+						<td></td>
+						<td></td>
+						<td></td>
+                          <td colspan=2 class="px-0 border-top border-top-2 text-right">
+                            <strong>Purchase Order Value </strong>
+                          </td>
+                          <td colspan="3" class="px-0 text-right border-top border-top-2">
+                            <span class="h3">
+                              ₹ 54,720.96
+                            </span>
+                          </td>
+                        </tr>							
                       </tbody>
                     </table>
                   </div>
@@ -179,7 +287,10 @@
 
                   <!-- Text -->
                   <p class="text-muted mb-0">
-                    Special Instructions for the Purchase Order
+01. In case of INCO Terms as Ex-Warehouse, it will be understood that all risks and rewards pertaining to the goods shipped will be transferred to us
+moment the shipment leaves your warehouse.
+<br>02. It is expected to deliver the goods as per schedule. In case of non availability, please inform us the Expected Date of Dispatch.
+<br>03. Warranty 1year , and AMC one year after the warranty
                   </p>
 
                 </div>

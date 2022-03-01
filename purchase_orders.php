@@ -26,6 +26,11 @@ if($customer_id == '2'){
 	$cust_2 ='';
 	$cust_1 ='d-none';
 }
+
+if(isset($_POST["submit"])) {
+	$_SESSION['po_uploaded'] = true;
+}
+
 ?>
 
 <!doctype html>
@@ -59,7 +64,6 @@ if($customer_id == '2'){
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
-
       
 
       <div class="container-fluid">
@@ -74,7 +78,7 @@ if($customer_id == '2'){
 
                     <!-- Pretitle -->
                     <h6 class="header-pretitle">
-                      Overview
+                      <a href="r.php">Overview</a>
                     </h6>
 
                     <!-- Title -->
@@ -85,6 +89,9 @@ if($customer_id == '2'){
                   </div>
 
                 </div> <!-- / .row -->
+				<div class="row">
+			
+				</div>
 
               </div>
             </div>
@@ -92,10 +99,10 @@ if($customer_id == '2'){
             <!-- Card -->
             <div class="card" data-list='{"valueNames": ["orders-order", "orders-customer", "orders-date", "orders-total", "orders-status", "orders-method"]}'>
               <div class="card-header">
-
+				<div class="col-4">
                 <!-- Search -->
                 <form>
-                  <div class="input-group input-group-flush">
+                  <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
                         <i class="fe fe-search"></i>
@@ -104,7 +111,23 @@ if($customer_id == '2'){
                     <input class="form-control list-search" type="search" placeholder="Search">
                   </div>
                 </form>
-
+				</div>
+				
+				<?php if(in_array($customer_id,array('1','2'))) { ?>
+				<!-- Upload PO start -->
+				<div class="col-6">
+					<form action="purchase_orders.php" class="form-inline" method="post" enctype="multipart/form-data">
+					  Select PO PDF to upload:
+					  <input type="file" name="fileToUpload" id="fileToUpload">
+					  <input type="submit" value="Upload PO" name="submit">
+					</form>
+				</div>
+				<!-- Upload PO end -->			
+				<?php } ?>
+			
+			</div>
+				
+				
               </div>
               <div class="table-responsive">
                 <table class="table table-sm table-nowrap card-table">
@@ -144,6 +167,58 @@ if($customer_id == '2'){
                     </tr>
                   </thead>
                   <tbody class="list">
+                    
+					<?php 
+					//echo $customer_id;
+					if(!empty($_SESSION['po_uploaded'])) { ?>
+					<tr class="<?php echo  $cust_1;?> ">
+
+                      <td class="orders-order">
+                        <a href="/Radiometer_KPD_PO.pdf">PO-77</a>
+                      </td>
+                      <td class="orders-customer">
+                        Customer 1
+                      </td>
+                      <td class="orders-date">
+
+                        <!-- Time -->
+                        <time datetime="2021-09-12">09/12/2021</time>
+
+                      </td>
+                      <td class="orders-total">
+                        Rs. 4748.3
+                      </td>
+                      <td class="orders-status">
+
+                        <!-- Badge -->
+                        <div class="badge badge-primary">
+                          New PO
+                        </div>
+
+                      </td>
+
+                      <td>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="/Radiometer_KPD_PO.pdf" class="dropdown-item">
+                              Download PO
+                            </a>
+							<?php if($customer_id == '101'){ ?>
+                            <a href="#!" class="dropdown-item">
+                              Send PO PDF to Customer
+                            </a>
+							<?php } ?>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+					<?php } ?>
                     <tr class="<?php echo  $cust_1;?> ">
 
                       <td class="orders-order">
@@ -190,7 +265,7 @@ if($customer_id == '2'){
                         </div>
 
                       </td>
-                    </tr>
+                    </tr>					
                     <tr class="<?php echo $cust_1;?> ">
 
                       <td class="orders-order">
@@ -415,6 +490,12 @@ if($customer_id == '2'){
     <script src="./assets/js/theme.min.js"></script>
     <script src="./assets/js/dashkit.min.js"></script>
 
-
+<script>
+	// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
   </body>
 </html>

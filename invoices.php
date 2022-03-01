@@ -159,9 +159,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -195,9 +197,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -231,9 +235,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -267,9 +273,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -303,9 +311,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -336,9 +346,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -372,9 +384,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -408,9 +422,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download Invoice
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send Invoice to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 

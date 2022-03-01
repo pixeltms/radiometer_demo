@@ -67,7 +67,7 @@
                 <div class="card-body">
 
                   <!-- Form -->
-                  <form>
+                  <form id="dispatch">
                     <div class="form-group">
 						<label for="dc_numbers">Delivery Challan</label>
 						<select class="form-control" name="dc_numbers" id="dc_numbers" >
@@ -87,12 +87,12 @@
                     </div>
                     <div class="form-group">
 						<label for="tracking_id">Tracking Id</label>
-						<input type="text" class="form-control" id="tracking_id" >
+						<input type="text" class="form-control" id="tracking_id" value="3432432">
 						
                     </div>
                     <div class="form-group">
 						<label for="tracking_url">Tracking URL</label>
-						<input type="text" class="form-control" id="tracking_url" >
+						<input type="text" class="form-control" id="tracking_url" value="http://dtdc.com/3432432" >
                     </div>					
                     <!-- Button -->
                     <button type="submit" class="btn btn-primary">Save</button>
@@ -156,6 +156,11 @@ $("#tracking_id, #courier_partner").change(function () {
 	}
 	$('#tracking_url').val(url);
 	
+});
+
+$( "#dispatch" ).submit(function( event ) {
+  alert( "Record Saved" );
+  return false;
 });
 </script>
 

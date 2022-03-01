@@ -57,12 +57,12 @@ if(!empty($_POST['email'])){
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 offset-xl-2 offset-md-1 order-md-2 mb-5 mb-md-0">
-
+		<h1 class="text-center text-blue">Radiometer Order Management System</h1>
           <!-- Image -->
           <div class="text-center">
-            <img src="assets/img/illustrations/happiness.svg" alt="..." class="img-fluid">
+            <img src="assets/img/illustrations/scale.svg" alt="..." class="img-fluid">
           </div>
-
+		
         </div>
         <div class="col-12 col-md-5 col-xl-4 order-md-1 my-5">
           
@@ -70,11 +70,6 @@ if(!empty($_POST['email'])){
           <h1 class="display-4 text-center mb-3">
             Sign in
           </h1>
-          
-          <!-- Subheading -->
-          <p class="text-muted text-center mb-5">
-            Free access to our dashboard.
-          </p>
           
           <!-- Form -->
           <form method="post" action="login.php" >
@@ -132,12 +127,13 @@ if(!empty($_POST['email'])){
             </button>
 
             <!-- Link -->
+			<!--
             <div class="text-center">
               <small class="text-muted text-center">
                 Don't have an account yet? <a href="sign-up-illustration.html">Sign up</a>.
               </small>
             </div>
-            
+            -->
           </form>
 
         </div>

@@ -173,12 +173,14 @@ if($customer_id == '2'){
                             <a href="./DC-6520.pdf" target="_blank" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>
                           </div>
                         </div>
 
@@ -219,12 +221,14 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>
                           </div>
                         </div>
 
@@ -265,12 +269,14 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>
                           </div>
                         </div>
 
@@ -311,12 +317,14 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php }?>
                           </div>
                         </div>
 
@@ -357,12 +365,14 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>
                           </div>
                         </div>
 
@@ -402,12 +412,15 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>			
                           </div>
                         </div>
 
@@ -448,12 +461,14 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>						
                           </div>
                         </div>
 
@@ -494,12 +509,14 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download DC
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send DC to Customer (Email)
                             </a>
                             <a href="#!" class="dropdown-item">
                               Send DC to Warehouse (Email)
                             </a>							
+							<?php } ?>							
                           </div>
                         </div>
 

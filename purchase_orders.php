@@ -181,9 +181,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download PO
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send PO PDF to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -226,9 +228,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download PO
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send PO PDF to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -271,9 +275,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download PO
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send PO PDF to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -316,9 +322,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download PO
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send PO PDF to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 
@@ -361,9 +369,11 @@ if($customer_id == '2'){
                             <a href="#!" class="dropdown-item">
                               Download PO
                             </a>
+							<?php if($customer_id == '101'){ ?>
                             <a href="#!" class="dropdown-item">
                               Send PO PDF to Customer
                             </a>
+							<?php } ?>
                           </div>
                         </div>
 

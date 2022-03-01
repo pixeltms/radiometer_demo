@@ -40,11 +40,14 @@ if($customer_id == '2'){
         </button>
 
         <!-- Brand -->
-        <a class="navbar-brand" href="./index.html">
-          <img src="./assets/img/logo.svg" class="navbar-brand-img 
+        <a class="navbar-brand" href="/purchase_orders.php">
+          <img src="./assets/img/RadiometerLogoSvg.svg" class="navbar-brand-img 
           mx-auto" alt="...">
         </a>
-
+        <!-- Brand Mobile-->
+        <a class="navbar-brand d-block d-sm-none pr-5" href="/purchase_orders.php">
+          <img src="./assets/img/RadiometerLogoSvg.svg" width="100%" alt="...">
+        </a>
         <!-- User (xs) -->
         <div class="navbar-user d-md-none">
 
@@ -116,7 +119,15 @@ if($customer_id == '2'){
 		<?php if($customer_id =='101'){?>
           <!-- Divider -->
           <hr class="navbar-divider my-3">
-
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-md-4">
+			  <li class="nav-item">
+				<a href="./dashboard.php" class="nav-link ">
+				  Dashboard 
+				</a>
+			  </li>
+		  </ul>
+		  <hr class="navbar-divider my-3">
           <!-- Heading -->
           <h6 class="navbar-heading">
             CMS
